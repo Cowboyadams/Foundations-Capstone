@@ -14,3 +14,14 @@ var rollbar = new Rollbar({
 
 // record a generic message and send it to Rollbar
 rollbar.log('Hello world!')
+
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '/public/index.html'))
+  })
+  
+  
+  const port = process.env.PORT || 5050;
+  
+  app.listen(port, function() {
+      console.log(`Server rocking out on ${port}`)
+  })
