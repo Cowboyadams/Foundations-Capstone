@@ -11,18 +11,17 @@ const temperamentArr = [
         [5,4,3],
         [8,7,6]
     ]
-const localList =[
-        ['marshland', 'marshland', 'jungle mountains', 'deep jungle','oasis desert','tropical ocean','acid wastes'],
-        ['marshland','mediterranean hills','arid mountans','jungle','sand dunes','tropical ocean','wasteland'],
-        ['savanna','sand dunes','high desert','sparse jungle','sand dunes','tropical ocean','wasteland'],
-        ['marshland','rolling hills','jungle mountains','deep forest','savanna','ocean','acid wastes'],
+const localList = [
+        ['marshland', 'marshland', 'jungle mountains', 'deep jungle','oasis desert','tropical ocean', 'acid wastes'],
+        ['marshland','mediterranean hills','arid mountans','jungle','sand dunes','tropical ocean',      'wasteland'],
+        ['savanna','sand dunes','high desert','sparse jungle','sand dunes','tropical ocean',            'wasteland'],
+        ['marshland','rolling hills','jungle mountains','deep forest','savanna','ocean',              'acid wastes'],
         ['temperate meadows','rolling hills','mountain range','forest grove','semi-arid desert','ocean','wasteland'],
-        ['temperate meadows','rolling hills','mountain range','sparse forest','arid desert','ocean','wasteland'],
-        ['tundra','tundra hills','artic mountain range','taigia','cold desert','polar ocean','acid wastes'],
-        ['tundra','tundra hills','artic mountain range','taigia','frozen desert','polar ocean','wasteland'],
-        ['tundra','tundra hills','artic mountain range','taigia','frozen wastes','polar ocean','frozen wastes']
-
-]
+        ['temperate meadows','rolling hills','mountain range','sparse forest','arid desert','ocean',    'wasteland'],
+        ['tundra','tundra hills','artic mountain range','taigia','cold desert','polar ocean',         'acid wastes'],
+        ['tundra','tundra hills','artic mountain range','taigia','frozen desert','polar ocean',         'wasteland'],
+        ['tundra','tundra hills','artic mountain range','taigia','frozen wastes','polar ocean',     'frozen wastes']
+    ]
 
 //identifiers
 let asdf = chunkList.length - 1
@@ -74,7 +73,9 @@ this.biome = function generateBiome () {
         if (biomeRoll === 0) {newBiome = 1}
         else if (biomeRoll === 1) {newBiome = 2} 
         else if (biomeRoll === 2) {newBiome = 4} 
-        else if (biomeRoll === 3) {newBiome = 6}   
+        else if (biomeRoll === 3) {newBiome = 6}
+        else if (biomeRoll === 4) {newBiome = 2}
+        else if (biomeRoll === 5) {newBiome = 2}  
       }
     else if (baseBiome === 3) {
         if (biomeRoll === 0) {newBiome = 3}
@@ -82,7 +83,7 @@ this.biome = function generateBiome () {
         else if (biomeRoll === 2) {newBiome = 1}
         else if (biomeRoll === 3) {newBiome = 0}
         else if (biomeRoll === 4) {newBiome = 3}
-        else if (biomeRoll === 4) {newBiome = 3}
+        else if (biomeRoll === 5) {newBiome = 3}
       }
     else if (baseBiome === 4) { 
         if (biomeRoll === 0) {newBiome = 2}
@@ -122,28 +123,31 @@ this.biome = function generateBiome () {
         if (changeChanceRoll === 1) {
         for (let i = -1; i < 2; i = i + 2) {
             let currTempOptions = temperamentArr[y][x + i]
-            if (currTempOptions) {
+            if (currTempOptions !== undefined) {
                 temperamentOptions.push(currTempOptions)
             }
         }
         for (let i = -1; i < 2; i = i + 2) {
-            if (temperamentArr[y + i]) {
+            if (temperamentArr[y + i] !== undefined) {
                 let currTempOptions = temperamentArr[y + i][x]
-                if (currTempOptions) {
+                if (currTempOptions !== undefined) {
                     temperamentOptions.push(currTempOptions)
                 }
             }
         }
-       let temperamentRoll = Math.floor(Math.random() * (temperamentOptions.length - 1))
+       let temperamentRoll = Math.floor(Math.random() * (temperamentOptions.length))
         let newTemperament = temperamentOptions[temperamentRoll]
         return newTemperament
-    } else {
-        return lastChunk.temperament}}(lastChunk);
+    } else {return lastChunk.temperament}}(lastChunk);
+
 
     this.local = function localSelect () {
         let x = lastChunk.biome
+        console.log(x)
         let y = lastChunk.temperament
-        let newLocal = localList[y,x]
+        console.log(y)
+        let newLocal = localList[y][x]
+        console.log(newLocal)
         return newLocal
     }(lastChunk);
 }}
@@ -157,4 +161,3 @@ function generateNewChunk () {
 }
     
 newChunkBtn.addEventListener('click', generateNewChunk)
-
