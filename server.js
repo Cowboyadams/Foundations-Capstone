@@ -19,9 +19,9 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '/public/index.html'))
   })
 
-  app.get('/', (req, res) => {
+  app.get('/style', (req, res) => {
     rollbar.log('fetching index.css')
-      res.sendFile(path.join(__dirname, '/public/index.html'))
+      res.sendFile(path.join(__dirname, '/public/index.css'))
     })
   
   
