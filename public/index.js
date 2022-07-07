@@ -1,3 +1,12 @@
+//biome ID's
+// 0 = Plains, 1 = Hills, 2 = Mountains, 3 = Forest 
+// 4 = Desert, 5 = Ocean, 6 = Wasteland
+
+//Temprament ID's
+// 0 = Hot/Wet, 1 = Hot/Av, 2 = Hot/Dry 
+// 3 = Temp/Wet, 4 = Temperate, 5 = Temp/Dry
+// 6 = Cold/wet, 7 = Cold/Av, 8 = Cold/dry
+
 //Query Selectors
 const newChunkBtn = document.querySelector('#newChunkBtn')
 
