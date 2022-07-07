@@ -15,7 +15,7 @@ var rollbar = new Rollbar({
 
 
 app.get('/', (req, res) => {
-  rollbar.log('fetching index.js')
+  rollbar.log('fetching index.html')
   res.sendFile(path.join(__dirname, '/public/index.html'))
 })
 
