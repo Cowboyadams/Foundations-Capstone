@@ -11,6 +11,18 @@ const temperamentArr = [
         ['temp/dry','temperate','temp/wet'],
         ['cold/dry', 'cold/mod', 'cold/wet']
     ]
+const localList =[
+        ['marshland', 'marshland', 'jungle mountains', 'deep jungle','oasis desert','tropical ocean','acid wastes']
+        ['marshland','mediterranean hills','arid mountans','jungle','sand dunes','tropical ocean','wasteland']
+        ['savanna','sand dunes','high desert','sparse jungle','sand dunes','tropical ocean','wasteland']
+        ['marshland','rolling hills','jungle mountains','deep forest','savanna','ocean','acid wastes']
+        ['temperate meadows','rolling hills','mountain range','forest grove','semi-arid desert','ocean','wasteland']
+        ['temperate meadows','rolling hills','mountain range','sparse forest','arid desert','ocean','wasteland']
+        ['tundra','tundra hills','artic mountain range','taigia','cold desert','polar ocean','acid wastes']
+        ['tundra','tundra hills','artic mountain range','taigia','frozen desert','polar ocean','wasteland']
+        ['tundra','tundra hills','artic mountain range','taigia','frozen wastes','polar ocean','frozen wastes']
+
+]
 
 //identifiers
 let asdf = chunkList.length - 1
@@ -99,6 +111,7 @@ this.biome = function generateBiome () {
     return newBiome
     }(lastChunk);
 
+    //temperament selector
     this.temperament = function temperamentSelect () {
 
         let baseTemperamentCoords = getTempCoords(lastChunk.temperament)

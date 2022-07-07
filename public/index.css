@@ -1,3 +1,7 @@
 p1 {
     color: blue;
 }
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
