@@ -5,11 +5,11 @@ const newChunkBtn = document.querySelector('#newChunkBtn')
 
 //memory
 let idList = [1]
-let chunkList = [ { ID: 1, biome: "plains", temperament: "temperate"}]
+let chunkList = [ { ID: 1, biome: 0, temperament: 4, local: localList[4,0]}]
 const temperamentArr = [
-        ['hot/dry', "hot/mod", "hot/wet"],
-        ['temp/dry','temperate','temp/wet'],
-        ['cold/dry', 'cold/mod', 'cold/wet']
+        [2,1,0],
+        [5,4,3],
+        [8,7,6]
     ]
 const localList =[
         ['marshland', 'marshland', 'jungle mountains', 'deep jungle','oasis desert','tropical ocean','acid wastes']
@@ -53,60 +53,60 @@ this.biome = function generateBiome () {
     
     let biomeRoll = Math.floor(Math.random() * 6)
     let baseBiome = lastChunk.biome
-    let newBiome = 'plains'
-   if (baseBiome === "plains") { 
-        if (biomeRoll === 0) {newBiome = "hills"}
-        else if (biomeRoll === 1) {newBiome = "forest"}
-        else if (biomeRoll === 2) {newBiome = "plains"}
-        else if (biomeRoll === 3) {newBiome = "ocean"}
-        else if (biomeRoll === 4) {newBiome = "plains"}
-        else if (biomeRoll === 5) {newBiome = "plains"}
+    let newBiome = 0
+   if (baseBiome === 0) { 
+        if (biomeRoll === 0) {newBiome = 1}
+        else if (biomeRoll === 1) {newBiome = 3}
+        else if (biomeRoll === 2) {newBiome = 0}
+        else if (biomeRoll === 3) {newBiome = 5}
+        else if (biomeRoll === 4) {newBiome = 0}
+        else if (biomeRoll === 5) {newBiome = 0}
       }
-    else if (baseBiome === "hills") { 
-        if (biomeRoll === 0) { newBiome = "plains"}
-        else if (biomeRoll === 1) { newBiome = "mountains"}
-        else if (biomeRoll === 2) {newBiome = "forest"}
-        else if (biomeRoll === 3) {newBiome = "hills"}
-        else if (biomeRoll === 4) {newBiome = "hills"}
-        else if (biomeRoll === 5) {newBiome = "hills"}
+    else if (baseBiome === 1) { 
+        if (biomeRoll === 0) { newBiome = 0}
+        else if (biomeRoll === 1) { newBiome = 2}
+        else if (biomeRoll === 2) {newBiome = 3}
+        else if (biomeRoll === 3) {newBiome = 1}
+        else if (biomeRoll === 4) {newBiome = 1}
+        else if (biomeRoll === 5) {newBiome = 1}
       }
-    else if (baseBiome === "mountains") {
-        if (biomeRoll === 0) {newBiome = "hills"}
-        else if (biomeRoll === 1) {newBiome = "mountains"} 
-        else if (biomeRoll === 2) {newBiome = "desert"} 
-        else if (biomeRoll === 3) {newBiome = "wasteland"}   
+    else if (baseBiome === 2) {
+        if (biomeRoll === 0) {newBiome = 1}
+        else if (biomeRoll === 1) {newBiome = 2} 
+        else if (biomeRoll === 2) {newBiome = 4} 
+        else if (biomeRoll === 3) {newBiome = 6}   
       }
-    else if (baseBiome === "forest") {
-        if (biomeRoll === 0) {newBiome = "forest"}
-        else if (biomeRoll === 1) {newBiome = "ocean"}
-        else if (biomeRoll === 2) {newBiome = "hills"}
-        else if (biomeRoll === 3) {newBiome = "plains"}
-        else if (biomeRoll === 4) {newBiome = "forest"}
-        else if (biomeRoll === 4) {newBiome = "forest"}
+    else if (baseBiome === 3) {
+        if (biomeRoll === 0) {newBiome = 3}
+        else if (biomeRoll === 1) {newBiome = 5}
+        else if (biomeRoll === 2) {newBiome = 1}
+        else if (biomeRoll === 3) {newBiome = 0}
+        else if (biomeRoll === 4) {newBiome = 3}
+        else if (biomeRoll === 4) {newBiome = 3}
       }
-    else if (baseBiome === "desert") { 
-        if (biomeRoll === 0) {newBiome = "mountains"}
-        else if (biomeRoll === 1) {newBiome = "desert"}
-        else if (biomeRoll === 2) {newBiome = "ocean"}
-        else if (biomeRoll === 3) {newBiome = "wasteland"}
-        else if (biomeRoll === 4) {newBiome = "desert"}
-        else if (biomeRoll === 5) {newBiome = "desert"}   
+    else if (baseBiome === 4) { 
+        if (biomeRoll === 0) {newBiome = 2}
+        else if (biomeRoll === 1) {newBiome = 4}
+        else if (biomeRoll === 2) {newBiome = 5}
+        else if (biomeRoll === 3) {newBiome = 6}
+        else if (biomeRoll === 4) {newBiome = 4}
+        else if (biomeRoll === 5) {newBiome = 4}   
   }
-    else if (baseBiome === "ocean") {
-        if (biomeRoll === 0) {newBiome = "plains"}
-        else if (biomeRoll === 1) {newBiome = "ocean"}
-        else if (biomeRoll === 2) {newBiome = "forest"}
-        else if (biomeRoll === 3) {newBiome = "desert"}
-        else if (biomeRoll === 4) {newBiome = "ocean"}
-        else if (biomeRoll === 5) {newBiome = "ocean"}   
+    else if (baseBiome === 5) {
+        if (biomeRoll === 0) {newBiome = 0}
+        else if (biomeRoll === 1) {newBiome = 5}
+        else if (biomeRoll === 2) {newBiome = 3}
+        else if (biomeRoll === 3) {newBiome = 4}
+        else if (biomeRoll === 4) {newBiome = 5}
+        else if (biomeRoll === 5) {newBiome = 5}   
       }
-    else if (baseBiome === "wasteland") {  
-        if (biomeRoll === 0) {newBiome = "desert"}
-        else if (biomeRoll === 1) {newBiome = "mountains"}
-        else if (biomeRoll === 2) {newBiome = "desert"}
-        else if (biomeRoll === 3) {newBiome = "mountains"}
-        else if (biomeRoll === 4) {newBiome = "Wasteland"}
-        else if (biomeRoll === 5) {newBiome = "Wasteland"}
+    else if (baseBiome === 6) {  
+        if (biomeRoll === 0) {newBiome = 4}
+        else if (biomeRoll === 1) {newBiome = 2}
+        else if (biomeRoll === 2) {newBiome = 4}
+        else if (biomeRoll === 3) {newBiome = 2}
+        else if (biomeRoll === 4) {newBiome = 6}
+        else if (biomeRoll === 5) {newBiome = 6}
      }
     return newBiome
     }(lastChunk);
@@ -139,6 +139,13 @@ this.biome = function generateBiome () {
         return newTemperament
     } else {
         return lastChunk.temperament}}(lastChunk);
+
+    this.local = function localSelect () {
+        let x = lastChunk.biome
+        let y = lastChunk.temperament
+        let newLocal = localList[y,x]
+        return newLocal
+    }(lastChunk);
 }}
 
 function generateNewChunk () {
