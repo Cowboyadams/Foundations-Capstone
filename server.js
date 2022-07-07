@@ -15,9 +15,14 @@ var rollbar = new Rollbar({
 
 
 app.get('/', (req, res) => {
-  rollbar.log('Hello world!')
+  rollbar.log('fetching index.js')
     res.sendFile(path.join(__dirname, '/public/index.html'))
   })
+
+  app.get('/', (req, res) => {
+    rollbar.log('fetching index.css')
+      res.sendFile(path.join(__dirname, '/public/index.html'))
+    })
   
   
   const port = process.env.PORT || 5050;
