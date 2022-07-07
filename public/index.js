@@ -40,7 +40,6 @@ class chunk {
 this.biome = function generateBiome () {
     
     let biomeRoll = Math.floor(Math.random() * 6)
-    console.log(`biome roll is ${biomeRoll}`)
     let baseBiome = lastChunk.biome
     let newBiome = 'plains'
    if (baseBiome === "plains") { 
@@ -103,10 +102,6 @@ this.biome = function generateBiome () {
     this.temperament = function temperamentSelect () {
 
         let baseTemperamentCoords = getTempCoords(lastChunk.temperament)
-        console.log("previous temperament was:")
-        console.log(lastChunk.temperament)
-        console.log("previous temperament coordinates are:")
-        console.log(baseTemperamentCoords)
         let x = baseTemperamentCoords[0]
         let y = baseTemperamentCoords[1]
         const temperamentOptions = []
@@ -128,10 +123,8 @@ this.biome = function generateBiome () {
         }
        let temperamentRoll = Math.floor(Math.random() * (temperamentOptions.length - 1))
         let newTemperament = temperamentOptions[temperamentRoll]
-        console.log(`your options are ${temperamentOptions} and you get number ${temperamentRoll}`)
         return newTemperament
     } else {
-        console.log('no luck!')
         return lastChunk.temperament}}(lastChunk);
 }}
 
