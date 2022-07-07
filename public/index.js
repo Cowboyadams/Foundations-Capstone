@@ -5,7 +5,7 @@ const newChunkBtn = document.querySelector('#newChunkBtn')
 
 //memory
 let idList = [1]
-let chunkList = [ { ID: 1, biome: 0, temperament: 4, local: localList[4,0]}]
+let chunkList = [ { ID: 1, biome: 0, temperament: 4, local: 'temperate meadows'}]
 const temperamentArr = [
         [2,1,0],
         [5,4,3],
