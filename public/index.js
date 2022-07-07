@@ -140,7 +140,7 @@ function generateNewChunk () {
     chunkList.push(newChunk)
     asdf = chunkList.length - 1
     lastChunk = chunkList[asdf]
-    alert(chunkList)
+    console.log(chunkList)
 }
     
 newChunkBtn.addEventListener('click', generateNewChunk)
