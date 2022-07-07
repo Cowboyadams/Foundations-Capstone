@@ -12,10 +12,10 @@ var rollbar = new Rollbar({
   captureUnhandledRejections: true,
 })
 
-// record a generic message and send it to Rollbar
-rollbar.log('Hello world!')
+
 
 app.get('/', (req, res) => {
+  rollbar.log('Hello world!')
     res.sendFile(path.join(__dirname, '/public/index.html'))
   })
   
