@@ -16,13 +16,18 @@ var rollbar = new Rollbar({
 
 app.get('/', (req, res) => {
   rollbar.log('fetching index.js')
-    res.sendFile(path.join(__dirname, '/public/index.html'))
-  })
+  res.sendFile(path.join(__dirname, '/public/index.html'))
+})
 
-  app.get('/style', (req, res) => {
-    rollbar.log('fetching index.css')
-      res.sendFile(path.join(__dirname, '/public/index.css'))
-    })
+app.get('/style', (req, res) => {
+  rollbar.log('fetching index.css')
+  res.sendFile(path.join(__dirname, '/public/index.css'))
+})
+
+app.get('/js', (req, res) => {
+  rollbar.log('fetching index.js')
+  res.sendFile(path.join(__dirname, '/public/index.js'))
+})
   
   
   const port = process.env.PORT || 5050;
