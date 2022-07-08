@@ -7,11 +7,44 @@
     <link rel="stylesheet" href="/style">
     <title>Kyanite World Gen</title>
 </head>
-<center><button id="newChunkBtn">Generate New Chunk</button></center>
+<center>
+    <div class="flex-container">
+        <div>
+            <button id="newChunkBtn">Generate New Chunk</button>
+        </div>
+        <br>
+        <div>
+            <form>
+                <select id="biome" name="biome">
+                    <option value="0">Plains</option>
+                    <option value="1">Hills</option>
+                    <option value="2">Mountains</option>
+                    <option value="3">Forest</option>
+                    <option value="4">Desert</option>
+                    <option value="5">Ocean</option>
+                    <option value="6">Wasteland</option>
+                </select>
+                <select id="temperament" name="temperament">
+                    <option value="0">Hot/Wet</option>
+                    <option value="1">Hot/Av</option>
+                    <option value="2">Hot/Dry</option>
+                    <option value="3">Temp/Wet</option>
+                    <option value="4">Temperate</option>
+                    <option value="5">Temp/Dry</option>
+                    <option value="6">Cold/Wet</option>
+                    <option value="7">Cold/Av</option>
+                    <option value="8">Cold/Dry</option>
+                </select>
+                <input type="submit" id="submitBtn">
+            </form>
+        </div>
+    </div>
+</center>
 <body>
    
     
 
     <script src="/js"></script>
+    <script src="/axios"></script>
 </body>
 </html>

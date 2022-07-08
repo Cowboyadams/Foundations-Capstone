@@ -9,7 +9,13 @@
 
 //Query Selectors
 const newChunkBtn = document.querySelector('#newChunkBtn')
-  
+const b = document.getElementById('biome')
+const newChunkBiome = b.value
+console.log(newChunkBiome)
+const t = document.getElementById('temperament')
+const newChunkTemp = t.value
+const submitBtn = document.getElementById('submitBtn')
+
 //DIV Creation
 body = document.getElementsByTagName('body')[0];
 console.log(body)
@@ -21,6 +27,7 @@ const chunkContainer = document.createElement('div')
 
 //memory
 let idList = [1]
+let manualIdList = []
 let chunkList = [ { ID: 1, biome: 0, temperament: 4, local: 'temperate meadows'}]
 const temperamentArr = [
         [2,1,0],
@@ -38,7 +45,7 @@ const localList = [
         ['tundra','tundra-hills','artic-mountain-range','taigia','frozen-desert','polar-ocean',         'wasteland'],
         ['tundra','tundra-hills','artic-mountain-range','taigia','frozen-wastes','polar-ocean',     'frozen-wastes']
     ]
-
+let ManualChunkList =[]
 //identifiers
 let asdf = chunkList.length - 1
 let lastChunk = chunkList[asdf]
@@ -156,6 +163,7 @@ this.biome = function generateBiome () {
         return newTemperament
     } else {return lastChunk.temperament}}(lastChunk);
 
+    
 
     this.local = function localSelect () {
         let x = lastChunk.biome
@@ -168,7 +176,26 @@ this.biome = function generateBiome () {
     }(lastChunk);
 }}
 
-function generateNewChunk () {
+//-------------------------------------
+
+class manualChunk {
+    constructor (){
+        this.biome = newChunkTemp;
+        this.temperament = newChunkTemp;
+        this.local = function localSelect () {
+                let x = lastChunk.biome
+                let y = lastChunk.temperament
+                let newLocal = localList[y][x]
+                return newLocal
+            }(lastChunk);
+        }
+}
+
+//------------------------------------------------------------------------------------------------------------
+
+
+//Functions
+            function generateNewChunk () {
     let newChunk = new chunk
     chunkList.push(newChunk)
     asdf = chunkList.length - 1
@@ -184,5 +211,24 @@ function generateNewChunk () {
     const newContent = document.createTextNode(`${lastChunk.local}`) 
     NewChunkDiv.appendChild(newContent)
 }
+
+const generateManualChunk = (e) => {
+    e.preventDefault();
+    let x = [newChunkBiome, newChunkTemp]
+    console.log('hit')
+    axios.post('/server', x)
+    .then(res => {
+        if (res.data.success){
+            alert("Manual Chunk Created!")
+        } else {
+            console.log('no axios error, but chunk creation not successful')
+        }
+    })
+    .catch(err => {
+        console.log('axios error:') 
+        console.log(err)
+    })
+}
     
 newChunkBtn.addEventListener('click', generateNewChunk)
+submitBtn.addEventListener("click", generateManualChunk)
