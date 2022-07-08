@@ -9,7 +9,14 @@
 
 //Query Selectors
 const newChunkBtn = document.querySelector('#newChunkBtn')
+  
+//DIV Creation
+body = document.getElementsByTagName('body')[0];
 
+const chunkContainer = document.createElement('div')
+    chunkContainer.className = "flex-container"
+    chunkContainer.id = "chunk-container"
+    body.appendChild(chunkContainer)
 
 
 //memory
@@ -21,15 +28,15 @@ const temperamentArr = [
         [8,7,6]
     ]
 const localList = [
-        ['marshland', 'marshland', 'jungle mountains', 'deep jungle','oasis desert','tropical ocean', 'acid wastes'],
-        ['marshland','mediterranean hills','arid mountans','jungle','sand dunes','tropical ocean',      'wasteland'],
-        ['savanna','sand dunes','high desert','sparse jungle','sand dunes','tropical ocean',            'wasteland'],
-        ['marshland','rolling hills','jungle mountains','deep forest','savanna','ocean',              'acid wastes'],
-        ['temperate meadows','rolling hills','mountain range','forest grove','semi-arid desert','ocean','wasteland'],
-        ['temperate meadows','rolling hills','mountain range','sparse forest','arid desert','ocean',    'wasteland'],
-        ['tundra','tundra hills','artic mountain range','taigia','cold desert','polar ocean',         'acid wastes'],
-        ['tundra','tundra hills','artic mountain range','taigia','frozen desert','polar ocean',         'wasteland'],
-        ['tundra','tundra hills','artic mountain range','taigia','frozen wastes','polar ocean',     'frozen wastes']
+        ['marshland', 'marshland', 'jungle-mountains', 'deep-jungle','oasis-desert','tropical-ocean', 'acid-wastes'],
+        ['marshland','mediterranean-hills','arid-mountains','jungle','sand-dunes','tropical-ocean',      'wasteland'],
+        ['savanna','sand-dunes','high-desert','sparse-jungle','sand-dunes','tropical-ocean',            'wasteland'],
+        ['marshland','rolling-hills','jungle-mountains','deep-forest','savanna','ocean',              'acid-wastes'],
+        ['temperate-meadows','rolling-hills','mountain-range','forest-grove','semi-arid-desert','ocean','wasteland'],
+        ['temperate-meadows','rolling-hills','mountain-range','sparse-forest','arid-desert','ocean',    'wasteland'],
+        ['tundra','tundra-hills','artic-mountain-range','taigia','cold-desert','polar-ocean',         'acid-wastes'],
+        ['tundra','tundra-hills','artic-mountain-range','taigia','frozen-desert','polar-ocean',         'wasteland'],
+        ['tundra','tundra-hills','artic-mountain-range','taigia','frozen-wastes','polar-ocean',     'frozen-wastes']
     ]
 
 //identifiers
@@ -167,6 +174,21 @@ function generateNewChunk () {
     asdf = chunkList.length - 1
     lastChunk = chunkList[asdf]
     console.log(chunkList)
+    
+  
+    
+    const NewChunkDiv = document.createElement('div')
+    NewChunkDiv.id = lastChunk.local
+    NewChunkDiv.className = "item"
+    chunkContainer.appendChild(NewChunkDiv)
+    
+    const newContent = document.createTextNode(`${lastChunk.local}`) 
+    newContent.className = "chunk-name"
+    NewChunkDiv.appendChild(newContent)
+    
+    
+    const currentDiv = document.getElementById("chunks")
+    document.body.insertBefore(NewChunkDiv, currentDiv)
 }
     
 newChunkBtn.addEventListener('click', generateNewChunk)

@@ -3,5 +3,171 @@ p1 {
 }
 .flex-container {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
+}
+div2 {
+    height: 100px;
+    height: 100px;
+    background-color: aquamarine;
+}
+
+
+
+
+
+#temperate-meadows {
+    width: 100px;
+    height: 100px;
+    background-color: greenyellow;
+}
+#marshland {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(139, 185, 69);
+}
+#mediterranean-hills{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(104, 203, 93);
+}
+#rolling-hills {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(79, 208, 64);
+}
+#tundra {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(113, 225, 210);
+}
+#tundra-hills {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(133, 211, 212);
+}
+#savanna {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(225, 228, 74);
+}
+#sand-dunes{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(236, 225, 143);
+}
+#arid-mountains {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(213, 215, 183);
+}
+#semi-arid-desert {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(248, 220, 108);
+}
+#arid-desert {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(228, 208, 135);
+}
+#high-desert {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(246, 217, 135);
+}
+#oasis-desert {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(214, 226, 102);
+}
+#cold-desert {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(220, 216, 171);
+}
+#deep-jungle {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(57, 144, 2);
+}
+#jungle {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(35, 173, 0);
+}
+#sparse-jungle {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(178, 242, 82);
+}
+#jungle-mountains {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(95, 230, 115);
+}
+#mountain-range {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(167, 203, 239);
+}
+#artic-mountain-range {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(115, 232, 230);
+}
+#taigia {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(105, 146, 142);
+}
+#tropical-ocean {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(0, 255, 251);
+}
+#ocean {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(71, 219, 252);
+}
+#polar-ocean {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(104, 222, 251);
+}
+#acid-wastes {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(217, 160, 231);
+}
+#wasteland {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(190, 128, 128);
+}
+#frozen-wastes {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(227, 205, 243);
+}
+#frozen-desert {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(239, 244, 207);
+}
+#deep-forest {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(57, 160, 72);
+}
+#forest-grove {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(122, 167, 55);
+}
+#sparse-forest {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(164, 187, 129);
 }
