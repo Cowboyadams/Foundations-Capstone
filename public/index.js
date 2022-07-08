@@ -12,7 +12,7 @@ const newChunkBtn = document.querySelector('#newChunkBtn')
   
 //DIV Creation
 body = document.getElementsByTagName('body')[0];
-
+console.log(body)
 const chunkContainer = document.createElement('div')
     chunkContainer.className = "flex-container"
     chunkContainer.id = "chunk-container"
@@ -175,20 +175,14 @@ function generateNewChunk () {
     lastChunk = chunkList[asdf]
     console.log(chunkList)
     
-  
-    
     const NewChunkDiv = document.createElement('div')
     NewChunkDiv.id = lastChunk.local
     NewChunkDiv.className = "item"
-    chunkContainer.appendChild(NewChunkDiv)
+    cc = document.getElementById('chunk-container')
+    cc.appendChild(NewChunkDiv)
     
     const newContent = document.createTextNode(`${lastChunk.local}`) 
-    newContent.className = "chunk-name"
     NewChunkDiv.appendChild(newContent)
-    
-    
-    const currentDiv = document.getElementById("chunks")
-    document.body.insertBefore(NewChunkDiv, currentDiv)
 }
     
 newChunkBtn.addEventListener('click', generateNewChunk)
