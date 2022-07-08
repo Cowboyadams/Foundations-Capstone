@@ -221,7 +221,7 @@ const generateManualChunk = (e) => {
         if (res.data.success){
             alert("Manual Chunk Created!")
         } else {
-            console.log('no axios error, but chunk creation not successful')
+            rollbar.error('no axios error, but chunk creation not successful')
         }
     })
     .catch(err => {
