@@ -8,7 +8,7 @@ p1 {
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
-    line-height: 100px;
+    line-height: 12.15vh;
     
 }
 .flex-container1 {
@@ -23,188 +23,221 @@ p1 {
 }
 
 #temperate-meadows {
-    width: 150px;
-    height: 100px;
+    width: 12.15vw;
+    height: 12.15vh;
     background-color: greenyellow;
     font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2vw;
+    
 }
 #marshland {
-    width: 150px;
-    height: 100px;
+    width: 12.15vw;
+    height: 12.15vh;
     background-color: rgb(139, 185, 69);
     font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2vw;
 }
 #mediterranean-hills{
-    width: 150px;
-    height: 100px;
+    width: 12.15vw;
+    height: 12.15vh;
     background-color: rgb(104, 203, 93);
     font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2vw;
+    
 }
 #rolling-hills {
-    width: 150px;
-    height: 100px;
+    width: 12.15vw;
+    height: 12.15vh;
     background-color: rgb(79, 208, 64);
     font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2vw;
 }
 #tundra {
-    width: 150px;
-    height: 100px;
+    width: 12.15vw;
+    height: 12.15vh;
     background-color: rgb(113, 225, 210);
     font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2vw;
 }
 #tundra-hills {
-    width: 150px;
-    height: 100px;
+    width: 12.15vw;
+    height: 12.15vh;
     background-color: rgb(133, 211, 212);
     font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2vw;
 }
 #savanna {
-    width: 150px;
-    height: 100px;
+    width: 12.15vw;
+    height: 12.15vh;
     background-color: rgb(225, 228, 74);
     font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2vw;
 }
 #sand-dunes{
-    width: 150px;
-    height: 100px;
+    width: 12.15vw;
+    height: 12.15vh;
     background-color: rgb(236, 225, 143);
     font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2vw;
 }
 #arid-mountains {
-    width: 150px;
-    height: 100px;
+    width: 12.15vw;
+    height: 12.15vh;
     background-color: rgb(213, 215, 183);
     font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2vw;
 }
 #semi-arid-desert {
-    width: 150px;
-    height: 100px;
+    width: 12.15vw;
+    height: 12.15vh;
     background-color: rgb(248, 220, 108);
     font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2vw;
 }
 #arid-desert {
-    width: 150px;
-    height: 100px;
+    width: 12.15vw;
+    height: 12.15vh;
     background-color: rgb(228, 208, 135);
     font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2vw;
 }
 #high-desert {
-    width: 150px;
-    height: 100px;
+    width: 12.15vw;
+    height: 12.15vh;
     background-color: rgb(246, 217, 135);
     font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2vw;
 }
 #oasis-desert {
-    width: 150px;
-    height: 100px;
+    width: 12.15vw;
+    height: 12.15vh;
     background-color: rgb(214, 226, 102);
     font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2vw;
 }
 #cold-desert {
-    width: 150px;
-    height: 100px;
+    width: 12.15vw;
+    height: 12.15vh;
     background-color: rgb(220, 216, 171);
     font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2vw;
 }
 #deep-jungle {
-    width: 150px;
-    height: 100px;
+    width: 12.15vw;
+    height: 12.15vh;
     background-color: rgb(57, 144, 2);
     font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2vw;
 }
 #jungle {
-    width: 150px;
-    height: 100px;
+    width: 12.15vw;
+    height: 12.15vh;
     background-color: rgb(35, 173, 0);
     font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2vw;
 }
 #sparse-jungle {
-    width: 150px;
-    height: 100px;
+    width: 12.15vw;
+    height: 12.15vh;
     background-color: rgb(178, 242, 82);
     font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2vw;
 }
 #jungle-mountains {
-    width: 150px;
-    height: 100px;
+    width: 12.15vw;
+    height: 12.15vh;
     background-color: rgb(95, 230, 115);
     font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2vw;
 }
 #mountain-range {
-    width: 150px;
-    height: 100px;
+    width: 12.15vw;
+    height: 12.15vh;
     background-color: rgb(167, 203, 239);
     font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2vw;
 }
 #artic-mountain-range {
-    width: 150px;
-    height: 100px;
+    width: 12.15vw;
+    height: 12.15vh;
     background-color: rgb(115, 232, 230);
     font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2vw;
 }
 #taigia {
-    width: 150px;
-    height: 100px;
+    width: 12.15vw;
+    height: 12.15vh;
     background-color: rgb(105, 146, 142);
     font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2vw;
 }
 #tropical-ocean {
-    width: 150px;
-    height: 100px;
+    width: 12.15vw;
+    height: 12.15vh;
     background-color: rgb(0, 255, 251);
     font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2vw;
 }
 #ocean {
-    width: 150px;
-    height: 100px;
+    width: 12.15vw;
+    height: 12.15vh;
     background-color: rgb(71, 219, 252);
     font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2vw;
 }
 #polar-ocean {
-    width: 150px;
-    height: 100px;
+    width: 12.15vw;
+    height: 12.15vh;
     background-color: rgb(104, 222, 251);
     font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2vw;
 }
 #acid-wastes {
-    width: 150px;
-    height: 100px;
+    width: 12.15vw;
+    height: 12.15vh;
     background-color: rgb(217, 160, 231);
     font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2vw;
 }
 #wasteland {
-    width: 150px;
-    height: 100px;
+    width: 12.15vw;
+    height: 12.15vh;
     background-color: rgb(190, 128, 128);
     font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2vw;
 }
 #frozen-wastes {
-    width: 150px;
-    height: 100px;
+    width: 12.15vw;
+    height: 12.15vh;
     background-color: rgb(227, 205, 243);
     font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2vw;
 }
 #frozen-desert {
-    width: 150px;
-    height: 100px;
+    width: 12.15vw;
+    height: 12.15vh;
     background-color: rgb(239, 244, 207);
     font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2vw;
 }
 #deep-forest {
-    width: 150px;
-    height: 100px;
+    width: 12.15vw;
+    height: 12.15vh;
     background-color: rgb(57, 160, 72);
     font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2vw;
 }
 #forest-grove {
-    width: 150px;
-    height: 100px;
+    width: 12.15vw;
+    height: 12.15vh;
     background-color: rgb(122, 167, 55);
     font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2vw;
 }
 #sparse-forest {
-    width: 150px;
-    height: 100px;
+    width: 12.15vw;
+    height: 12.15vh;
     background-color: rgb(164, 187, 129);
     font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2vw;
 }
