@@ -220,6 +220,8 @@ const generateManualChunk = (e) => {
     console.log('hit')
     axios.post('/server', x)
         .then(res => {
+            res.data.biome = +res.data.biome
+            res.data.temperament = +res.data.temperament
             chunkList.push(res.data)
             asdf = chunkList.length - 1
             lastChunk = chunkList[asdf]
