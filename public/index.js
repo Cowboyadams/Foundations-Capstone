@@ -232,6 +232,7 @@ const generateManualChunk = (e) => {
             cc = document.getElementById('chunk-container')
             cc.appendChild(NewChunkDiv)
             const newContent = document.createTextNode(`${lastChunk.local}`) 
+            newContent.id = "words"
             NewChunkDiv.appendChild(newContent)
         })
         .catch(err => {
