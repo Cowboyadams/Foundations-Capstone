@@ -9,12 +9,9 @@
 
 //Query Selectors
 const newChunkBtn = document.querySelector('#newChunkBtn')
-const b = document.getElementById('biome')
-const newChunkBiome = b.value
-console.log(newChunkBiome)
-const t = document.getElementById('temperament')
-const newChunkTemp = t.value
 const submitBtn = document.getElementById('submitBtn')
+const form = document.getElementById('form')
+
 
 //DIV Creation
 body = document.getElementsByTagName('body')[0];
@@ -214,20 +211,31 @@ class manualChunk {
 
 const generateManualChunk = (e) => {
     e.preventDefault();
+    const b = document.getElementById('biome')
+    const newChunkBiome = b.value
+    const t = document.getElementById('temperament')
+    const newChunkTemp = t.value
     let x = [newChunkBiome, newChunkTemp]
+    // console.log(x)
     console.log('hit')
     axios.post('/server', x)
-    .then(res => {
-        if (res.data.success){
-            alert("Manual Chunk Created!")
-        } else {
-            rollbar.error('no axios error, but chunk creation not successful')
-        }
-    })
-    .catch(err => {
+        .then(res => {
+            chunkList.push(res.data)
+            asdf = chunkList.length - 1
+            lastChunk = chunkList[asdf]
+            console.log(chunkList) 
+            const NewChunkDiv = document.createElement('div')
+            NewChunkDiv.id = lastChunk.local
+            NewChunkDiv.className = "item"
+            cc = document.getElementById('chunk-container')
+            cc.appendChild(NewChunkDiv)
+            const newContent = document.createTextNode(`${lastChunk.local}`) 
+            NewChunkDiv.appendChild(newContent)
+        })
+        .catch(err => {
         console.log('axios error:') 
         console.log(err)
-    })
+        })
 }
     
 newChunkBtn.addEventListener('click', generateNewChunk)
