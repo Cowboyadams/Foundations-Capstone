@@ -209,9 +209,126 @@ this.biome = function generateBiome () {
         let newTemperament = temperamentOptions[temperamentRoll]
         return newTemperament
     } else {return lastChunk.temperament}}(lastChunk);
-
+let bome = this.biome
+//Feature Selector
+    this.features = function featureSelect(biomeID) {
+       let numberOfFeatures = Math.floor(Math.random() * 5)
+           
+       let totalFeatures =[]
+       
+       if (numberOfFeatures >= 1 && numberOfFeatures <= 4) {
+        //PLAINS
+        if (biomeID === 0) {
+            let plainsS = plainsFeatures[0]
+            let plainsA = plainsFeatures[1]
+            let plainsB = plainsFeatures[2]
+            let plainsC = plainsFeatures[3]
+            let plainsF = plainsFeatures[4]
+            for (let j = 0; j < numberOfFeatures; j++){
+                    let rarityRoll = Math.ceil(Math.random() * 101)
+                    if (rarityRoll >= 1 && rarityRoll <= 49) {
+                        let featureRoll = Math.ceil(Math.random() * plainsF.length -1) 
+                        totalFeatures.push(plainsF[featureRoll])
+                    } else if (rarityRoll >= 50 && rarityRoll <= 73) {
+                        let featureRoll = Math.ceil(Math.random() * plainsC.length -1) 
+                        totalFeatures.push(plainsC[featureRoll])
+                    } else if (rarityRoll >= 74 && rarityRoll <= 87) {
+                        let featureRoll = Math.ceil(Math.random() * plainsB.length -1) 
+                        totalFeatures.push(plainsB[featureRoll])
+                    } else if (rarityRoll >= 88 && rarityRoll <= 96) {
+                        let featureRoll = Math.ceil(Math.random() * plainsA.length -1) 
+                        totalFeatures.push(plainsA[featureRoll])
+                    } else if (rarityRoll >= 97 && rarityRoll <= 101) {
+                        let featureRoll = Math.ceil(Math.random() * plainsS.length -1) 
+                       
+                        totalFeatures.push(plainsS[featureRoll])
+                    }
+                }
+                
+            } else if (biomeID === 1) {
+                    let hillsS = hillsFeatures[0]
+                    let hillsA = hillsFeatures[1]
+                    let hillsB = hillsFeatures[2]
+                    let hillsC = hillsFeatures[3]
+                    let hillsF = hillsFeatures[4]
+                    for (let j = 0; j < numberOfFeatures; j++){
+                            let rarityRoll = Math.ceil(Math.random() * 101)
+                            if (rarityRoll >= 1 && rarityRoll <= 49) {
+                                let featureRoll = Math.ceil(Math.random() * hillsF.length -1) 
+                                totalFeatures.push(hillsF[featureRoll])
+                            } else if (rarityRoll >= 50 && rarityRoll <= 73) {
+                                let featureRoll = Math.ceil(Math.random() * hillsC.length -1) 
+                                totalFeatures.push(hillsC[featureRoll])
+                            } else if (rarityRoll >= 74 && rarityRoll <= 87) {
+                                let featureRoll = Math.ceil(Math.random() * hillsB.length -1) 
+                                totalFeatures.push(hillsB[featureRoll])
+                            } else if (rarityRoll >= 88 && rarityRoll <= 96) {
+                                let featureRoll = Math.ceil(Math.random() * hillsA.length -1) 
+                                totalFeatures.push(hillsA[featureRoll])
+                            } else if (rarityRoll >= 97 && rarityRoll <= 101) {
+                                let featureRoll = Math.ceil(Math.random() * hillsS.length -1) 
+                               
+                                totalFeatures.push(hillsS[featureRoll])
+                            }
+                        }
+                     }    
+            }
+            else if (biomeID === 2) {
+                    let mountainS = mountainFeatures[0]
+                    let mountainA = mountainFeatures[1]
+                    let mountainB = mountainFeatures[2]
+                    let mountainC = mountainFeatures[3]
+                    let mountainF = mountainFeatures[4]
+                    for (let j = 0; j < numberOfFeatures; j++){
+                            let rarityRoll = Math.ceil(Math.random() * 101)
+                            if (rarityRoll >= 1 && rarityRoll <= 49) {
+                                let featureRoll = Math.ceil(Math.random() * mountainF.length -1) 
+                                totalFeatures.push(mountainF[featureRoll])
+                            } else if (rarityRoll >= 50 && rarityRoll <= 73) {
+                                let featureRoll = Math.ceil(Math.random() * mountainC.length -1) 
+                                totalFeatures.push(mountainC[featureRoll])
+                            } else if (rarityRoll >= 74 && rarityRoll <= 87) {
+                                let featureRoll = Math.ceil(Math.random() * mountainB.length -1) 
+                                totalFeatures.push(mountainB[featureRoll])
+                            } else if (rarityRoll >= 88 && rarityRoll <= 96) {
+                                let featureRoll = Math.ceil(Math.random() * mountainA.length -1) 
+                                totalFeatures.push(mountainA[featureRoll])
+                            } else if (rarityRoll >= 97 && rarityRoll <= 101) {
+                                let featureRoll = Math.ceil(Math.random() * mountainS.length -1) 
+                                totalFeatures.push(mountainS[featureRoll])
+            }}}
+            else if (biomeID === 3) {
+                    let forestS = forestFeatures[0]
+                    let forestA = forestFeatures[1]
+                    let forestB = forestFeatures[2]
+                    let forestC = forestFeatures[3]
+                    let forestF = forestFeatures[4]
+                    for (let j = 0; j < numberOfFeatures; j++){
+                            let rarityRoll = Math.ceil(Math.random() * 101)
+                            if (rarityRoll >= 1 && rarityRoll <= 49) {
+                                let featureRoll = Math.ceil(Math.random() * forestF.length -1) 
+                                totalFeatures.push(forestF[featureRoll])
+                            } else if (rarityRoll >= 50 && rarityRoll <= 73) {
+                                let featureRoll = Math.ceil(Math.random() * forestC.length -1) 
+                                totalFeatures.push(forestC[featureRoll])
+                            } else if (rarityRoll >= 74 && rarityRoll <= 87) {
+                                let featureRoll = Math.ceil(Math.random() * forestB.length -1) 
+                                totalFeatures.push(forestB[featureRoll])
+                            } else if (rarityRoll >= 88 && rarityRoll <= 96) {
+                                let featureRoll = Math.ceil(Math.random() * forestA.length -1) 
+                                totalFeatures.push(forestA[featureRoll])
+                            } else if (rarityRoll >= 97 && rarityRoll <= 101) {
+                                let featureRoll = Math.ceil(Math.random() * forestS.length -1) 
+                                totalFeatures.push(forestS[featureRoll])
+            }}}
+            let answer = totalFeatures.join(", ")
+            console.log(`the total features are ${totalFeatures}`)
+            console.log(`the answer is ${answer}`)
+        return answer
+    }
+    (bome);
     
-
+//Locale Selector
     this.local = function localSelect () {
         let x = lastChunk.biome
         console.log(x)
@@ -247,16 +364,14 @@ class manualChunk {
     chunkList.push(newChunk)
     asdf = chunkList.length - 1
     lastChunk = chunkList[asdf]
-    console.log(chunkList)
-    
     const NewChunkDiv = document.createElement('div')
     NewChunkDiv.id = lastChunk.local
     NewChunkDiv.className = "item"
     cc = document.getElementById('chunk-container')
     cc.appendChild(NewChunkDiv)
-    
     const newContent = document.createTextNode(`${lastChunk.local}`) 
     NewChunkDiv.appendChild(newContent)
+    console.log(chunkList)
 }
 
 const generateManualChunk = (e) => {
