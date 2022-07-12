@@ -79,10 +79,10 @@ const desertFeatures = [
 ]
 const oceanFeatures = [
     ["Inhabited Island", "Treasure Island"],
-    ["Large Island", "Small Island", "Shipping Lane", "Floatsam Island", "Archipelago"]
+    ["Large Island", "Small Island", "Shipping Lane", "Floatsam Island", "Archipelago"],
     ["Hot Plumes", "Underwater Trench", "Shipwreck", "Whirlpool"],
     ["Coral Reef", "Ocean Floor", "Kelp Forest", "Atoll"],
-    ["Islets"]
+    ["Islets","Deep Sea Trench"]
 ]
 const wastelandFeatures = [
     ["Oasis"],
@@ -213,12 +213,14 @@ let bome = this.biome
 //Feature Selector
     this.features = function featureSelect(biomeID) {
        let numberOfFeatures = Math.floor(Math.random() * 5)
-           
+           console.log(`number of features roll was ${numberOfFeatures}`)
+           console.log(`the Biome ID is ${biomeID}`)
        let totalFeatures =[]
        
        if (numberOfFeatures >= 1 && numberOfFeatures <= 4) {
         //PLAINS
         if (biomeID === 0) {
+            console.log('hit')
             let plainsS = plainsFeatures[0]
             let plainsA = plainsFeatures[1]
             let plainsB = plainsFeatures[2]
@@ -244,8 +246,9 @@ let bome = this.biome
                         totalFeatures.push(plainsS[featureRoll])
                     }
                 }
-                
+                //HILLS
             } else if (biomeID === 1) {
+                console.log('hit')
                     let hillsS = hillsFeatures[0]
                     let hillsA = hillsFeatures[1]
                     let hillsB = hillsFeatures[2]
@@ -256,24 +259,28 @@ let bome = this.biome
                             if (rarityRoll >= 1 && rarityRoll <= 49) {
                                 let featureRoll = Math.ceil(Math.random() * hillsF.length -1) 
                                 totalFeatures.push(hillsF[featureRoll])
-                            } else if (rarityRoll >= 50 && rarityRoll <= 73) {
+                            } 
+                            else if (rarityRoll >= 50 && rarityRoll <= 73) {
                                 let featureRoll = Math.ceil(Math.random() * hillsC.length -1) 
                                 totalFeatures.push(hillsC[featureRoll])
-                            } else if (rarityRoll >= 74 && rarityRoll <= 87) {
+                            } 
+                            else if (rarityRoll >= 74 && rarityRoll <= 87) {
                                 let featureRoll = Math.ceil(Math.random() * hillsB.length -1) 
                                 totalFeatures.push(hillsB[featureRoll])
-                            } else if (rarityRoll >= 88 && rarityRoll <= 96) {
+                            } 
+                            else if (rarityRoll >= 88 && rarityRoll <= 96) {
                                 let featureRoll = Math.ceil(Math.random() * hillsA.length -1) 
                                 totalFeatures.push(hillsA[featureRoll])
-                            } else if (rarityRoll >= 97 && rarityRoll <= 101) {
+                            } 
+                            else if (rarityRoll >= 97 && rarityRoll <= 101) {
                                 let featureRoll = Math.ceil(Math.random() * hillsS.length -1) 
-                               
-                                totalFeatures.push(hillsS[featureRoll])
+                               totalFeatures.push(hillsS[featureRoll])
                             }
                         }
                      }    
-            }
+            
             else if (biomeID === 2) {
+                console.log('hit')
                     let mountainS = mountainFeatures[0]
                     let mountainA = mountainFeatures[1]
                     let mountainB = mountainFeatures[2]
@@ -298,6 +305,7 @@ let bome = this.biome
                                 totalFeatures.push(mountainS[featureRoll])
             }}}
             else if (biomeID === 3) {
+                console.log('hit')
                     let forestS = forestFeatures[0]
                     let forestA = forestFeatures[1]
                     let forestB = forestFeatures[2]
@@ -305,6 +313,7 @@ let bome = this.biome
                     let forestF = forestFeatures[4]
                     for (let j = 0; j < numberOfFeatures; j++){
                             let rarityRoll = Math.ceil(Math.random() * 101)
+                            
                             if (rarityRoll >= 1 && rarityRoll <= 49) {
                                 let featureRoll = Math.ceil(Math.random() * forestF.length -1) 
                                 totalFeatures.push(forestF[featureRoll])
@@ -320,7 +329,82 @@ let bome = this.biome
                             } else if (rarityRoll >= 97 && rarityRoll <= 101) {
                                 let featureRoll = Math.ceil(Math.random() * forestS.length -1) 
                                 totalFeatures.push(forestS[featureRoll])
+                    }}}
+                    else if (biomeID === 4) {
+                        console.log('hit')
+                        let desertS = desertFeatures[0]
+                        let desertA = desertFeatures[1]
+                        let desertB = desertFeatures[2]
+                        let desertc = desertFeatures[3]
+                        let desertF = desertFeatures[4]
+                        for (let j = 0; j < numberOfFeatures; j++){
+                                let rarityRoll = Math.ceil(Math.random() * 101)
+                                if (rarityRoll >= 1 && rarityRoll <= 49) {
+                                    let featureRoll = Math.ceil(Math.random() * desertF.length -1) 
+                                    totalFeatures.push(desertF[featureRoll])
+                                } else if (rarityRoll >= 50 && rarityRoll <= 73) {
+                                    let featureRoll = Math.ceil(Math.random() * desertc.length -1) 
+                                    totalFeatures.push(desertc[featureRoll])
+                                } else if (rarityRoll >= 74 && rarityRoll <= 87) {
+                                    let featureRoll = Math.ceil(Math.random() * desertB.length -1) 
+                                    totalFeatures.push(desertB[featureRoll])
+                                } else if (rarityRoll >= 88 && rarityRoll <= 96) {
+                                    let featureRoll = Math.ceil(Math.random() * desertA.length -1) 
+                                    totalFeatures.push(desertA[featureRoll])
+                                } else if (rarityRoll >= 97 && rarityRoll <= 101) {
+                                    let featureRoll = Math.ceil(Math.random() * desertS.length -1) 
+                                    totalFeatures.push(desertS[featureRoll])
             }}}
+            else if (biomeID === 5) {
+                console.log('hit')
+                let oceanS = oceanFeatures[0]
+                let oceanA = oceanFeatures[1]
+                let oceanB = oceanFeatures[2]
+                let oceanC = oceanFeatures[3]
+                let oceanF = oceanFeatures[4]
+                for (let j = 0; j < numberOfFeatures; j++){
+                        let rarityRoll = Math.ceil(Math.random() * 101)
+                        if (rarityRoll >= 1 && rarityRoll <= 49) {
+                            let featureRoll = Math.ceil(Math.random() * oceanF.length -1) 
+                            totalFeatures.push(oceanF[featureRoll])
+                        } else if (rarityRoll >= 50 && rarityRoll <= 73) {
+                            let featureRoll = Math.ceil(Math.random() * oceanC.length -1) 
+                            totalFeatures.push(oceanC[featureRoll])
+                        } else if (rarityRoll >= 74 && rarityRoll <= 87) {
+                            let featureRoll = Math.ceil(Math.random() * oceanB.length -1) 
+                            totalFeatures.push(oceanB[featureRoll])
+                        } else if (rarityRoll >= 88 && rarityRoll <= 96) {
+                            let featureRoll = Math.ceil(Math.random() * oceanA.length -1) 
+                            totalFeatures.push(oceanA[featureRoll])
+                        } else if (rarityRoll >= 97 && rarityRoll <= 101) {
+                            let featureRoll = Math.ceil(Math.random() * oceanS.length -1) 
+                            totalFeatures.push(oceanS[featureRoll])
+            }}}
+            else if (biomeID === 6) {
+                console.log('hit')
+                let wastelandS = wastelandFeatures[0]
+                let WastelandA = wastelandFeatures[1]
+                let wastelandB = wastelandFeatures[2]
+                let wastelandC = wastelandFeatures[3]
+                let wastelandF = wastelandFeatures[4]
+                for (let j = 0; j < numberOfFeatures; j++){
+                        let rarityRoll = Math.ceil(Math.random() * 101)
+                        if (rarityRoll >= 1 && rarityRoll <= 49) {
+                            let featureRoll = Math.ceil(Math.random() * wastelandF.length -1) 
+                            totalFeatures.push(wastelandF[featureRoll])
+                        } else if (rarityRoll >= 50 && rarityRoll <= 73) {
+                            let featureRoll = Math.ceil(Math.random() * wastelandC.length -1) 
+                            totalFeatures.push(wastelandC[featureRoll])
+                        } else if (rarityRoll >= 74 && rarityRoll <= 87) {
+                            let featureRoll = Math.ceil(Math.random() * wastelandB.length -1) 
+                            totalFeatures.push(wastelandB[featureRoll])
+                        } else if (rarityRoll >= 88 && rarityRoll <= 96) {
+                            let featureRoll = Math.ceil(Math.random() * WastelandA.length -1) 
+                            totalFeatures.push(WastelandA[featureRoll])
+                        } else if (rarityRoll >= 97 && rarityRoll <= 101) {
+                            let featureRoll = Math.ceil(Math.random() * wastelandS.length -1) 
+                            totalFeatures.push(wastelandS[featureRoll])
+            }}}}
             let answer = totalFeatures.join(", ")
             console.log(`the total features are ${totalFeatures}`)
             console.log(`the answer is ${answer}`)
@@ -339,7 +423,7 @@ let bome = this.biome
         return newLocal
     }(lastChunk);
 }}
-
+    
 //-------------------------------------
 
 class manualChunk {
