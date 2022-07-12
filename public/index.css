@@ -8,7 +8,7 @@ p1 {
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
-    line-height: 12.15vh;
+    
     
 }
 .flex-container1 {
@@ -16,9 +16,6 @@ p1 {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    text-align: center;
-}
-.words {
     text-align: center;
 }
 
@@ -240,4 +237,8 @@ p1 {
     background-color: rgb(164, 187, 129);
     font-family: 'Times New Roman', Times, serif;
     font-size: 1.2vw;
+}
+#local {
+    text-align: center;
+    font-weight: bold;
 }
