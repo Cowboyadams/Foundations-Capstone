@@ -11,6 +11,8 @@
 const newChunkBtn = document.querySelector('#newChunkBtn')
 const submitBtn = document.getElementById('submitBtn')
 const form = document.getElementById('form')
+const batchBtn = document.getElementById('batchBtn')
+const batchForm = document.getElementById('batchChunkForm')
 
 
 //DIV Creation
@@ -484,6 +486,58 @@ class manualChunk {
     console.log(chunkList)
 }
 
+
+function generateBatch (e) {
+    e.preventDefault();
+    const num = document.getElementById('numOfChunksInBatch').value
+    console.log(num)
+    for (i = 0; i < num; i++) {
+
+        let newChunk = new chunk
+        chunkList.push(newChunk)
+        asdf = chunkList.length - 1
+        lastChunk = chunkList[asdf]
+        
+        const NewChunkDiv = document.createElement('div')
+            NewChunkDiv.id = lastChunk.local
+            NewChunkDiv.className = "item"
+            cc = document.getElementById('chunk-container')
+            cc.appendChild(NewChunkDiv)
+        
+        const par1 = document.createElement('p')
+            par1.className = "local"
+            NewChunkDiv.appendChild(par1)
+    
+        const newContent = document.createTextNode(`${lastChunk.local}`) 
+            par1.appendChild(newContent)
+        
+        // const brk = document.createElement('br')
+        //     NewChunkDiv.appendChild(brk)
+    
+        const par2 = document.createElement('p')
+            par2.className = "featureTitle"
+            NewChunkDiv.appendChild(par2)
+    
+        const newContent2 = document.createTextNode('Chunk Features:')
+            par2.appendChild(newContent2)
+    
+        const par3 = document.createElement('p')
+            par3.className = "features"
+            NewChunkDiv.appendChild(par3)
+        
+        const newContent3 = document.createTextNode(`${lastChunk.features}`)
+            newContent3.className = "words2"
+            par3.appendChild(newContent3)
+        console.log(chunkList)
+
+
+    }
+}
+
+
+
+
+
 const generateManualChunk = (e) => {
     e.preventDefault();
     const b = document.getElementById('biome')
@@ -519,3 +573,4 @@ const generateManualChunk = (e) => {
     
 newChunkBtn.addEventListener('click', generateNewChunk)
 submitBtn.addEventListener("click", generateManualChunk)
+batchBtn.addEventListener("click", generateBatch)
