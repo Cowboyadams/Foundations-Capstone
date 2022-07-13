@@ -175,7 +175,12 @@ p1 {
     width: 12.5vw;
 }
 
-
+#newChunk {
+    background-color: rgb(234, 234, 234);
+}
+#newManualChunk {
+    background-color: rgb(234, 234, 234);
+}
 .local {
     font-weight: bold;
     font-size: 1.2vw;

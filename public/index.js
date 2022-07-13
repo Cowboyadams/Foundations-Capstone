@@ -49,6 +49,8 @@ const plainsFeatures = [
     ["Springs", "River", "Trail"],
     ["Pond", "Stream"]
 ]
+
+plainsFeatures[1]
 const hillsFeatures = [
     ["Underground City"],
     ["Small Town","Ghost Town", "Homestead", "Abandoned Mine"],
@@ -237,10 +239,10 @@ let bome = this.biome
                     } else if (rarityRoll >= 74 && rarityRoll <= 87) {
                         let featureRoll = Math.ceil(Math.random() * plainsB.length -1) 
                         totalFeatures.push(plainsB[featureRoll])
-                    } else if (rarityRoll >= 88 && rarityRoll <= 96) {
+                    } else if (rarityRoll >= 88 && rarityRoll <= 98) {
                         let featureRoll = Math.ceil(Math.random() * plainsA.length -1) 
                         totalFeatures.push(plainsA[featureRoll])
-                    } else if (rarityRoll >= 97 && rarityRoll <= 101) {
+                    } else if (rarityRoll >= 99 && rarityRoll <= 101) {
                         let featureRoll = Math.ceil(Math.random() * plainsS.length -1) 
                        
                         totalFeatures.push(plainsS[featureRoll])
@@ -268,11 +270,11 @@ let bome = this.biome
                                 let featureRoll = Math.ceil(Math.random() * hillsB.length -1) 
                                 totalFeatures.push(hillsB[featureRoll])
                             } 
-                            else if (rarityRoll >= 88 && rarityRoll <= 96) {
+                            else if (rarityRoll >= 88 && rarityRoll <= 98) {
                                 let featureRoll = Math.ceil(Math.random() * hillsA.length -1) 
                                 totalFeatures.push(hillsA[featureRoll])
                             } 
-                            else if (rarityRoll >= 97 && rarityRoll <= 101) {
+                            else if (rarityRoll >= 99 && rarityRoll <= 101) {
                                 let featureRoll = Math.ceil(Math.random() * hillsS.length -1) 
                                totalFeatures.push(hillsS[featureRoll])
                             }
@@ -297,10 +299,10 @@ let bome = this.biome
                             } else if (rarityRoll >= 74 && rarityRoll <= 87) {
                                 let featureRoll = Math.ceil(Math.random() * mountainB.length -1) 
                                 totalFeatures.push(mountainB[featureRoll])
-                            } else if (rarityRoll >= 88 && rarityRoll <= 96) {
+                            } else if (rarityRoll >= 88 && rarityRoll <= 98) {
                                 let featureRoll = Math.ceil(Math.random() * mountainA.length -1) 
                                 totalFeatures.push(mountainA[featureRoll])
-                            } else if (rarityRoll >= 97 && rarityRoll <= 101) {
+                            } else if (rarityRoll >= 99 && rarityRoll <= 101) {
                                 let featureRoll = Math.ceil(Math.random() * mountainS.length -1) 
                                 totalFeatures.push(mountainS[featureRoll])
             }}}
@@ -323,10 +325,10 @@ let bome = this.biome
                             } else if (rarityRoll >= 74 && rarityRoll <= 87) {
                                 let featureRoll = Math.ceil(Math.random() * forestB.length -1) 
                                 totalFeatures.push(forestB[featureRoll])
-                            } else if (rarityRoll >= 88 && rarityRoll <= 96) {
+                            } else if (rarityRoll >= 88 && rarityRoll <= 98) {
                                 let featureRoll = Math.ceil(Math.random() * forestA.length -1) 
                                 totalFeatures.push(forestA[featureRoll])
-                            } else if (rarityRoll >= 97 && rarityRoll <= 101) {
+                            } else if (rarityRoll >= 99 && rarityRoll <= 101) {
                                 let featureRoll = Math.ceil(Math.random() * forestS.length -1) 
                                 totalFeatures.push(forestS[featureRoll])
                     }}}
@@ -348,10 +350,10 @@ let bome = this.biome
                                 } else if (rarityRoll >= 74 && rarityRoll <= 87) {
                                     let featureRoll = Math.ceil(Math.random() * desertB.length -1) 
                                     totalFeatures.push(desertB[featureRoll])
-                                } else if (rarityRoll >= 88 && rarityRoll <= 96) {
+                                } else if (rarityRoll >= 88 && rarityRoll <= 98) {
                                     let featureRoll = Math.ceil(Math.random() * desertA.length -1) 
                                     totalFeatures.push(desertA[featureRoll])
-                                } else if (rarityRoll >= 97 && rarityRoll <= 101) {
+                                } else if (rarityRoll >= 99 && rarityRoll <= 101) {
                                     let featureRoll = Math.ceil(Math.random() * desertS.length -1) 
                                     totalFeatures.push(desertS[featureRoll])
             }}}
@@ -373,10 +375,10 @@ let bome = this.biome
                         } else if (rarityRoll >= 74 && rarityRoll <= 87) {
                             let featureRoll = Math.ceil(Math.random() * oceanB.length -1) 
                             totalFeatures.push(oceanB[featureRoll])
-                        } else if (rarityRoll >= 88 && rarityRoll <= 96) {
+                        } else if (rarityRoll >= 88 && rarityRoll <= 98) {
                             let featureRoll = Math.ceil(Math.random() * oceanA.length -1) 
                             totalFeatures.push(oceanA[featureRoll])
-                        } else if (rarityRoll >= 97 && rarityRoll <= 101) {
+                        } else if (rarityRoll >= 99 && rarityRoll <= 101) {
                             let featureRoll = Math.ceil(Math.random() * oceanS.length -1) 
                             totalFeatures.push(oceanS[featureRoll])
             }}}
@@ -398,10 +400,10 @@ let bome = this.biome
                         } else if (rarityRoll >= 74 && rarityRoll <= 87) {
                             let featureRoll = Math.ceil(Math.random() * wastelandB.length -1) 
                             totalFeatures.push(wastelandB[featureRoll])
-                        } else if (rarityRoll >= 88 && rarityRoll <= 96) {
+                        } else if (rarityRoll >= 88 && rarityRoll <= 98) {
                             let featureRoll = Math.ceil(Math.random() * WastelandA.length -1) 
                             totalFeatures.push(WastelandA[featureRoll])
-                        } else if (rarityRoll >= 97 && rarityRoll <= 101) {
+                        } else if (rarityRoll >= 99 && rarityRoll <= 101) {
                             let featureRoll = Math.ceil(Math.random() * wastelandS.length -1) 
                             totalFeatures.push(wastelandS[featureRoll])
             }}}}
