@@ -490,7 +490,7 @@ class manualChunk {
 function generateBatch (e) {
     e.preventDefault();
     const num = document.getElementById('numOfChunksInBatch').value
-    console.log(num)
+    if (num > 1000) {num = 1000}
     for (i = 0; i < num; i++) {
 
         let newChunk = new chunk
