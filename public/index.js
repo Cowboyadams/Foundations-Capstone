@@ -462,8 +462,8 @@ class manualChunk {
     const newContent = document.createTextNode(`${lastChunk.local}`) 
         par1.appendChild(newContent)
     
-    const brk = document.createElement('br')
-        NewChunkDiv.appendChild(brk)
+    // const brk = document.createElement('br')
+    //     NewChunkDiv.appendChild(brk)
 
     const par2 = document.createElement('p')
         par2.className = "featureTitle"
