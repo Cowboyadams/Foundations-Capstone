@@ -36,6 +36,11 @@ app.get('/style', (req, res) => {
   res.sendFile(path.join(__dirname, '/public/index.css'))
 })
 
+app.get('/music', (req, res) => {
+  rollbar.log('fetching music')
+  res.sendFile(path.join(__dirname, '/public/Bongo2.mp3'))
+})
+ 
 app.get('/js', (req, res) => {
   rollbar.log('fetching index.js')
   res.sendFile(path.join(__dirname, '/public/index.js'))
