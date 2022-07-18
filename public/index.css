@@ -25,6 +25,7 @@ p1 {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    background-color: rgb(234, 234, 234);
 }
 /* .hidden {
     display: none;
